@@ -1,4 +1,9 @@
 ###################
+You Need folder vendor
+###################
+Copy paste folder vendor ini di folder htdocs <https://drive.google.com/file/d/1nesTfaflEsy1_27XUIgxih3foIBJp8Eu/view?usp=sharing>`_.
+
+###################
 What is CodeIgniter
 ###################
 
