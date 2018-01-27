@@ -120,7 +120,7 @@ class Orarevisi extends CI_Controller{
 		$judul = str_replace("     " , " ", $judul);
 		$judul = str_replace("    " , " ", $judul);
 		$judul = str_replace("   " , " ", $judul);
-			   $judul = str_replace("  " , " ", $judul);
+		$judul = str_replace("  " , " ", $judul);
 		$judul = trim($judul); 
 		$w=array('id_bobot'=>1);
 		$data = array(
@@ -128,7 +128,7 @@ class Orarevisi extends CI_Controller{
 				"judul_preprocessing"=>$judul
 		);
 		$this->m_data->proses_edit_data($w,$data,"tbl_bobot");
-		redirect('bobot/proses_perhitungan_bobot1');
+		redirect('nbc/proses_klasifikasi');
 	}
 	function hasil_perhitungan(){
 		$this->load->model('m_data');
