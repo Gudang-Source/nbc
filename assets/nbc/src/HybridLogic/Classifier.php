@@ -117,13 +117,13 @@ class Classifier {
 		$scores      = array();
 
 		foreach($this->subjects as $subject => $subject_data) {
-
 			$subject_data['prior_value'] = log($subject_data['count_samples'] / $this->total_samples);
 			$this->subjects[$subject] = $subject_data;
 			$scores[$subject] = 0;
 
 			foreach($tokens as $token) {
 				$count = isset($this->tokens[$token][$subject]) ? $this->tokens[$token][$subject] : 0;
+				//perhitungan TF-IDF
 				$scores[$subject] += log( ($count + 1) / ($subject_data['count_tokens'] + $this->total_tokens) );
 			}
 
